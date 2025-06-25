@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // Connect to MongoDB using env variable
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(`${process.env.MONGODB_URI}/CNC_GENIE`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => console.log('Connected to MongoDB Atlas'))
